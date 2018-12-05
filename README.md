@@ -23,7 +23,7 @@ There will be some new concepts you'll need to work through on this project, so 
   - You'll need to research the `<audio>` tag for this part - [docs here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
   - **Hint**: _You'll need to dynamically change the `src` value_
 
-One hard part will be getting the song to play. Since you will be dynamically generating the HTML for your results, adding an event listener to each result can be tricky. One way to make this easier is to put your `click` event listener on a parent node (like a `div` around the entire results section) and then get the correct item clicked on in your event listener. This is called "event delegation" and here is a comprehensive [article on the technique].(https://davidwalsh.name/event-delegate)
+One hard part will be getting the song to play. Since you will be dynamically generating the HTML for your results, adding an event listener to each result can be tricky. One way to make this easier is to put your `click` event listener on a parent node (like a `div` around the entire results section) and then get the correct item clicked on in your event listener. This is called "event delegation" and here is a comprehensive [article on the technique](https://davidwalsh.name/event-delegate).
 
 ### Bonus steps
 
