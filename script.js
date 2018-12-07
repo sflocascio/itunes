@@ -31,12 +31,17 @@ $('#search-button').click (function(){
                     let newSongP = document.createElement("p")
                     let songLink = document.createElement("a")
                     let newArtistP = document.createElement("p")
+                    let artistPic = document.createElement("img")
+                    artistPic.src = x.artworkUrl100
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
                     newArtistP.innerText = x.artistName
-                    $(newSongP).addClass("fl w-50 w-25-m w-20-l pa2")
+                    $(songLink).addClass("ml0 black truncate w-100 avenir")
+                    $(newArtistP).addClass("ml0 gray truncate w-100 avenir")
+                    $(newSongP).addClass("fl w-50 w-25-m w-20-l pa2 box")
                     // $("p").css({"color":"#"})
                     // $("a").css({"background-color": "#", "font-size": "100%"})
+                    newSongP.appendChild(artistPic)
                     newSongP.appendChild(songLink)
                     newSongP.appendChild(newArtistP)
                     resultsDiv.appendChild(newSongP)
@@ -50,7 +55,7 @@ $('#search-button').click (function(){
 
     
     
-
+// use . replace to change the size of the image 
 
 
 
