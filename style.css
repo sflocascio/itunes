@@ -1,4 +1,12 @@
 
+/* .new {
+    background-color: black;
+    border-style: solid black;
+    border-width: 5px;
+} */
+
+
+/* 
 body{
     margin-right: auto;
     margin-left:  auto;
@@ -7,7 +15,7 @@ body{
     padding-left:  10px;
 
     /* background-color: grey */
-}
+/* }
 
 p{
     
@@ -17,13 +25,18 @@ p{
     padding: 0.5em 10px;
     quotes: "\201C""\201D""\2018""\2019";
     width: 500px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;  /* <--- Really freaking cool! */
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;  
+    align-items: center;
     
     
 
 
-}
+} */ 
+
+
+
+
+

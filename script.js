@@ -34,11 +34,13 @@ $('#search-button').click (function(){
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
                     newArtistP.innerText = x.artistName
-                    $("p").css({"color":"#"})
-                    $("a").css({"background-color": "#", "font-size": "200%"})
+                    $(newSongP).addClass("fl w-50 w-25-m w-20-l pa2")
+                    // $("p").css({"color":"#"})
+                    // $("a").css({"background-color": "#", "font-size": "100%"})
                     newSongP.appendChild(songLink)
+                    newSongP.appendChild(newArtistP)
                     resultsDiv.appendChild(newSongP)
-                    resultsDiv.appendChild(newArtistP)
+                    
                 }
                 // $('search-results').appendChild("")
             })  
