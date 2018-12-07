@@ -30,13 +30,18 @@ $('#search-button').click (function(){
                 for (let x of result.results) {
                     let newSongP = document.createElement("p")
                     let songLink = document.createElement("a")
+                    let newArtistP = document.createElement("p")
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
+                    newArtistP.innerText = x.artistName
+                    $("p").css({"color":"#"})
+                    $("a").css({"background-color": "#", "font-size": "200%"})
                     newSongP.appendChild(songLink)
                     resultsDiv.appendChild(newSongP)
+                    resultsDiv.appendChild(newArtistP)
                 }
                 // $('search-results').appendChild("")
-            })
+            })  
 
         })
 })

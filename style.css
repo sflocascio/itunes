@@ -1,0 +1,29 @@
+
+body{
+    margin-right: auto;
+    margin-left:  auto;
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left:  10px;
+
+    /* background-color: grey */
+}
+
+p{
+    
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    width: 500px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;  /* <--- Really freaking cool! */
+  align-items: center;
+    
+    
+
+
+}
