@@ -21,7 +21,21 @@ $('#search-button').click (function(){
             dataType: 'json',
             success: (function(result){
                 console.log(result)
-                $('search-results').appendChild("")
+                let resultsDiv= document.getElementById('search-results')
+                resultsDiv.innerhtml = ''
+                let countP = document.createElement('p')
+                countP.innerText = `Total count: ${result.resultCount}`
+                resultsDiv.appendChild(countP )
+
+                for (let x of result.results) {
+                    let newSongP = document.createElement("p")
+                    let songLink = document.createElement("a")
+                    songLink.href = x.trackViewUrl
+                    songLink.innerText = x.trackName
+                    newSongP.appendChild(songLink)
+                    resultsDiv.appendChild(newSongP)
+                }
+                // $('search-results').appendChild("")
             })
 
         })
