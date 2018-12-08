@@ -36,16 +36,16 @@ $('#search-button').click (function(){
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
                     newArtistP.innerText = x.artistName
-                    $(songLink).addClass("ml0 black truncate w-100 avenir")
-                    $(newArtistP).addClass("ml0 gray truncate w-100 avenir")
-                    $(newSongP).addClass("fl w-50 w-25-m w-20-l pa2 box")
-                    // $("p").css({"color":"#"})
-                    // $("a").css({"background-color": "#", "font-size": "100%"})
+                    // $(artistPic).addClass("is-rounded")
+                    $(songLink).addClass("ml0 black truncate w-100 avenir db")
+                    $(newArtistP).addClass("ml0 gray truncate w-100 avenir db")
+                    $(newSongP).addClass("fl w-40 w-10-m w-10-l pa3 ma1 box w1 grow ")
                     newSongP.appendChild(artistPic)
                     newSongP.appendChild(songLink)
                     newSongP.appendChild(newArtistP)
                     resultsDiv.appendChild(newSongP)
                     
+                
                 }
                 // $('search-results').appendChild("")
             })  
