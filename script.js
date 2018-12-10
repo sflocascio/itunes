@@ -41,10 +41,10 @@ $('#search-button').click (function(){
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
                     newArtistP.innerText = x.artistName
-                    // $(artistPic).addClass("is-rounded")
+                    $(artistPic).addClass("br-100 ba h3 w3 dib")
                     $(songLink).addClass("ml0 black truncate w-100 avenir db")
                     $(newArtistP).addClass("ml0 gray truncate w-100 avenir db")
-                    $(newSongP).addClass("fl w-40 w-50-m w-50-l pa3 ma1 box w1 grow ")
+                    $(newSongP).addClass(" fl w-40 w-30-m w-20-l pa2 ma3 box w1 grow ")
                     $(music).addClass("trackPreview")
                     newSongP.appendChild(music)
                     newSongP.appendChild(artistPic)
@@ -71,17 +71,31 @@ $( "#search-results" ).on( "click", "p", function( event ){
     // let song = chosenSong.first-child
     console.log(song)
 
-    
     // song.autoplay = true
     song.controls = true
     
     let musicPlayer = document.getElementById("musicP")
     musicPlayer.innerHTML = " "
-    // song.autoplay = true
-    $(song).clone(true).appendTo(musicPlayer)
-    song.controls = false
-    // song.autoplay = true
+
+    let musicBox = document.getElementById("musicBox")
+    musicBox.innerHTML = " "
+
     
+
+    // $(musicPlayer)   
+    // song.autoplay = true
+    $(song).clone(true).appendTo(musicP)
+    song.controls = false
+
+    // divide
+
+
+    let songMaterials = chosenSong.children
+    // $(songMaterials).addClass("box")
+    $(songMaterials).clone(true).appendTo(musicBox)
+    
+    
+
     // $(song).remove()
     
 
@@ -92,9 +106,12 @@ $( "#search-results" ).on( "click", "p", function( event ){
     
 
         // musicDiv.appendChild(songMusic)
-    })
+})
 
+// $( "body" ).on( "click", function( event ){
+//     musicBox.innerHTML = " "
 
+// })
 
     
 // use . replace to change the size of the image 
