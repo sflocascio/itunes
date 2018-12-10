@@ -22,7 +22,8 @@ $('#search-button').click (function(){
             success: (function(result){
                 console.log(result)
                 let resultsDiv= document.getElementById('search-results')
-                resultsDiv.innerhtml = ''
+                resultsDiv.innerHTML = " "
+                // let musicDiv = document.getElementById('musicP')
                 let countP = document.createElement('p')
                 countP.innerText = `Total count: ${result.resultCount}`
                 resultsDiv.appendChild(countP )
@@ -32,6 +33,10 @@ $('#search-button').click (function(){
                     let songLink = document.createElement("a")
                     let newArtistP = document.createElement("p")
                     let artistPic = document.createElement("img")
+                    let music = document.createElement("audio")
+                    // music.controls = true
+                    // music.autoplay = false
+                    music.src = x.previewUrl
                     artistPic.src = x.artworkUrl100
                     songLink.href = x.trackViewUrl
                     songLink.innerText = x.trackName
@@ -39,21 +44,58 @@ $('#search-button').click (function(){
                     // $(artistPic).addClass("is-rounded")
                     $(songLink).addClass("ml0 black truncate w-100 avenir db")
                     $(newArtistP).addClass("ml0 gray truncate w-100 avenir db")
-                    $(newSongP).addClass("fl w-40 w-10-m w-10-l pa3 ma1 box w1 grow ")
+                    $(newSongP).addClass("fl w-40 w-50-m w-50-l pa3 ma1 box w1 grow ")
+                    $(music).addClass("trackPreview")
+                    newSongP.appendChild(music)
                     newSongP.appendChild(artistPic)
                     newSongP.appendChild(songLink)
                     newSongP.appendChild(newArtistP)
                     resultsDiv.appendChild(newSongP)
-                    
-                
-                }
-                // $('search-results').appendChild("")
-            })  
+                    // $( "#search-results" ).on( "click", "p", function( event ) {
+                    //     event.preventDefault()
+                    //     let songPreview =  $( this ).find("audio")
+                    //     let songMusic = document.createElement("a")
 
+                    //     musicDiv.appendChild(songMusic)
+                    // })
+
+                    }
+            })  
         })
 })
 
+$( "#search-results" ).on( "click", "p", function( event ){
+    // event.preventDefault()
+    let chosenSong = event.target
+    let song = chosenSong.firstChild  
+    // let song = chosenSong.first-child
+    console.log(song)
+
     
+    // song.autoplay = true
+    song.controls = true
+    
+    let musicPlayer = document.getElementById("musicP")
+    musicPlayer.innerHTML = " "
+    // song.autoplay = true
+    $(song).clone(true).appendTo(musicPlayer)
+    song.controls = false
+    // song.autoplay = true
+    
+    // $(song).remove()
+    
+
+    
+
+    // let song = ( $( this ).siblings() )
+    // musicDiv.appendTo(song) 
+    
+
+        // musicDiv.appendChild(songMusic)
+    })
+
+
+
     
 // use . replace to change the size of the image 
 
@@ -91,24 +133,17 @@ $('#search-button').click (function(){
 
 
 
+// BEST SELECTRO SO FAR 
+// $( "#search-results" ).on( "click", "p", function( event ) {
+//     event.preventDefault()
+//     console.log( $( this ).text() )
+        
+
+//         // musicDiv.appendChild(songMusic)
+//     })
 
 
 
-
-
-
-// $.ajax({
-// url: '',
-// data: {
-//     q: searchField.value
-// }
-
-// })
-
-// success: function(results) {
-//     console.log(results)
-//     let
-// }
 
 
 // $ sign works a lot like query selector all 
