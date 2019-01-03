@@ -1,10 +1,4 @@
-// reference documentation on jquery site. re: api 
 
-// let searchField = document.getElementById("seach-field")
-// let searchButton = document.getElementById("search-button")
-
-// console.log(searchField)
-// console.log(searchButton)
 
 
 $('#search-button').click (function(){
@@ -51,13 +45,7 @@ $('#search-button').click (function(){
                     newSongP.appendChild(songLink)
                     newSongP.appendChild(newArtistP)
                     resultsDiv.appendChild(newSongP)
-                    // $( "#search-results" ).on( "click", "p", function( event ) {
-                    //     event.preventDefault()
-                    //     let songPreview =  $( this ).find("audio")
-                    //     let songMusic = document.createElement("a")
-
-                    //     musicDiv.appendChild(songMusic)
-                    // })
+                  
 
                     }
             })  
@@ -82,8 +70,7 @@ $( "#search-results" ).on( "click", "p", function( event ){
 
     
 
-    // $(musicPlayer)   
-    // song.autoplay = true
+   
     $(song).clone(true).appendTo(musicP)
     song.controls = false
 
@@ -96,73 +83,11 @@ $( "#search-results" ).on( "click", "p", function( event ){
     
     
 
-    // $(song).remove()
-    
-
-    
-
-    // let song = ( $( this ).siblings() )
-    // musicDiv.appendTo(song) 
-    
-
-        // musicDiv.appendChild(songMusic)
+   
 })
 
-// $( "body" ).on( "click", function( event ){
-//     musicBox.innerHTML = " "
-
-// })
-
-    
-// use . replace to change the size of the image 
 
 
 
 
 
-
-//     console.log(inputValue);
-//     $.get('https://itunes-api-proxy.glitch.me/search?parameterkeyvalue', { data: inputValue }, function (results) {
-//     console.log(results)
-// }
-// })
-
-
-// $('#search-button').click (function(){
-//     let inputValue = $("#search-field").val();
-//     console.log(inputValue);
-//     $.ajax({
-//         url: "https:itunes-api-proxy.glitch.me/search?parameterkeyvalue",
-//         data: inputValue,
-//         success: success, function(results){
-//             let title = results.WrapperType, 
-//             $('#search-results').append(title),
-//         dataType: JSONP,
-
-
-//     })
-// }
-// })
-
-
-
-
-
-
-
-// BEST SELECTRO SO FAR 
-// $( "#search-results" ).on( "click", "p", function( event ) {
-//     event.preventDefault()
-//     console.log( $( this ).text() )
-        
-
-//         // musicDiv.appendChild(songMusic)
-//     })
-
-
-
-
-
-// $ sign works a lot like query selector all 
-
-// in jquery on means add event listener 
